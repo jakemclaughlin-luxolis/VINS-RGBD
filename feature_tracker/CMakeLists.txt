@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
     message_filters
     )
 
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 4 REQUIRED)
 
 catkin_package()
 

@@ -18,7 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
     message_filters
     )
 
-find_package(OpenCV)
+find_package(OpenCV 4)
 
 
 find_package(Ceres REQUIRED)

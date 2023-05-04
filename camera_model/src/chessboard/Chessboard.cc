@@ -17,7 +17,7 @@ Chessboard::Chessboard(cv::Size boardSize, cv::Mat& image)
 {
     if (image.channels() == 1)
     {
-        cv::cvtColor(image, mSketch, CV_GRAY2BGR);
+        cv::cvtColor(image, mSketch, cv::COLOR_GRAY2BGR);
         image.copyTo(mImage);
     }
     else
@@ -189,7 +189,7 @@ Chessboard::findChessboardCornersImproved(const cv::Mat& image,
             cv::Mat thresh_img;
 
             // convert the input grayscale image to binary (black-n-white)
-            if (flags & cv::CALIB_CB_ADAPTIVE_THRESH
+            if (flags & cv::CALIB_CB_ADAPTIVE_THRESH)
             {
                 int blockSize = lround(prevSqrSize == 0 ?
                     std::min(img.cols,img.rows)*(k%2 == 0 ? 0.2 : 0.1): prevSqrSize*2)|1;
